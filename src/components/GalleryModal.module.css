@@ -1,0 +1,113 @@
+/* .previewDialog {
+  padding: 2rem;
+  border: none;
+  border-radius: 12px;
+
+  background: #fff;
+  width: 90%;
+  max-width: 700px;
+  height: auto;
+  margin: auto;
+  text-align: center;
+  opacity: 1;
+} */
+/* box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); */
+.previewDialog {
+  position: fixed; /* Make it overlay the viewport */
+  top: 0; /* Align to top */
+  left: 0; /* Align to left */
+  width: 100vw; /* Full viewport width */
+  height: 100vh; /* Full viewport height */
+  display: flex; /* Center content */
+  flex-direction: column; /* Stack children vertically */
+  justify-content: center;
+  align-items: center;
+  background: rgba(36, 35, 35, 0.6); /* Dim background */
+  padding: 0;
+  margin: 0;
+  border: none;
+  border-radius: 0;
+  z-index: 2000; /* Make sure it's on top */
+  opacity: 1;
+}
+.galleryImage img {
+  cursor: pointer;
+  border-radius: 5px;
+}
+.previewDialog > * {
+  /* Optional: style the modal content box */
+  background: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+  max-width: 700px;
+  width: 90%;
+  text-align: center;
+}
+
+/* .preview-dialog::backdrop {
+  background: rgba(36, 35, 35, 0.6);
+} */
+
+.modalImg {
+  width: 400px;
+  /* height: auto; */
+  border-radius: 10px;
+  /* object-fit: cover; */
+  margin-bottom: 0.75rem;
+  margin: 0 auto;
+}
+
+.modalTitle {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 0.5rem 0;
+}
+
+.modalDescription {
+  font-size: 0.8rem;
+  color: #555;
+  margin-bottom: 1rem;
+}
+
+.previewDialog button {
+  background: #f0f0f0;
+  border: none;
+  border-radius: 5px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.3s ease;
+  margin-top: -2px;
+}
+
+.preview-dialog button:hover {
+  background: #ddd;
+}
+.content {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding-top: 8px;
+  padding-inline: 10px;
+}
+
+.title {
+  flex: 1;
+  text-align: left;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 15px;
+}
+
+.heart {
+  color: gray;
+  font-size: 1.2rem;
+  display: flex;
+  transition: color 0.3s ease;
+  align-items: center;
+  cursor: pointer;
+}
+.heart.active {
+  color: red;
+}
